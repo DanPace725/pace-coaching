@@ -45,7 +45,7 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto px-6 py-24 sm:py-32">
             <p className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-4">Pace Coaching</p>
             <h1 className="text-4xl sm:text-5xl font-semibold text-gray-900 tracking-tight leading-tight max-w-3xl">
-              Make the friction visible.
+              You're not the only one who hasn't figured it out.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-gray-500 max-w-2xl leading-relaxed">
               For people who hold it together, pay the hidden cost, and still wonder why ordinary life feels harder
