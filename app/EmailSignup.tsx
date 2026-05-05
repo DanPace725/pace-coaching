@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 
-const contactEmail = 'daniel@pacecoaching.com';
+const contactEmail = 'dpace@campusone80.com';
 
 export default function EmailSignup() {
   const [email, setEmail] = useState('');
