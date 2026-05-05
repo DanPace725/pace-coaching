@@ -11,6 +11,7 @@ export default function HomePage() {
           <nav className="hidden sm:flex items-center gap-8 text-sm text-gray-500">
             <a href="#about" className="hover:text-gray-900 transition-colors">About</a>
             <a href="#how-it-works" className="hover:text-gray-900 transition-colors">How It Works</a>
+            <a href="#resources" className="hover:text-gray-900 transition-colors">Resources</a>
             <a href="#offerings" className="hover:text-gray-900 transition-colors">Offerings</a>
             <a href="#fit" className="hover:text-gray-900 transition-colors">Is This For You</a>
             <a href="#contact" className="hover:text-gray-900 transition-colors">Contact</a>
@@ -128,6 +129,39 @@ export default function HomePage() {
             These aren&apos;t personality types or grades. They&apos;re just the places we look together when we&apos;re
             trying to tell the difference between you and the friction you&apos;ve been carrying.
           </p>
+        </div>
+      </section>
+
+      <section id="resources">
+        <div className="max-w-5xl mx-auto px-6 py-20 sm:py-24">
+          <div className="grid gap-10 lg:grid-cols-[1fr_20rem] lg:items-center">
+            <div>
+              <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">Free resource</h2>
+              <p className="text-2xl sm:text-3xl font-semibold text-gray-900 max-w-3xl leading-snug">
+                A printable friction grid for naming what your life has been making invisible.
+              </p>
+              <p className="mt-6 text-gray-500 max-w-2xl leading-relaxed">
+                Use it as a quiet first pass before coaching, journaling, or a hard conversation. The grid gives you a
+                place to separate what is actually yours from the roles, systems, and expectations that have been
+                handing their costs back to you.
+              </p>
+            </div>
+            <div className="rounded-xl border border-gray-200 bg-gray-50 p-6">
+              <p className="text-xs font-medium uppercase tracking-wide text-gray-400">PDF download</p>
+              <h3 className="mt-3 text-lg font-semibold text-gray-900">Friction Grid</h3>
+              <p className="mt-2 text-sm leading-relaxed text-gray-500">
+                A short, printable worksheet for mapping continuity, vitality, fit, differentiation, accountability,
+                and reflexivity.
+              </p>
+              <a
+                href="/downloads/friction-grid-redesigned.pdf"
+                download
+                className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-gray-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-800"
+              >
+                Download the PDF
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -369,6 +403,7 @@ export default function HomePage() {
           <nav className="flex gap-6">
             <a href="#about" className="hover:text-gray-600 transition-colors">About</a>
             <a href="#how-it-works" className="hover:text-gray-600 transition-colors">How It Works</a>
+            <a href="#resources" className="hover:text-gray-600 transition-colors">Resources</a>
             <a href="#offerings" className="hover:text-gray-600 transition-colors">Offerings</a>
             <a href="#contact" className="hover:text-gray-600 transition-colors">Contact</a>
           </nav>

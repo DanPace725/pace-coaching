@@ -7,7 +7,7 @@ This is a small Next.js site deployed on Vercel. The same update and deployment 
 1. Open the site folder:
 
    ```bash
-   cd pace-coaching-site
+   cd pace-coaching-site/pace-coaching
    ```
 
 2. Install dependencies if this is a fresh checkout:
@@ -83,7 +83,7 @@ For this project, Vercel should detect Next.js automatically. If you need to con
 | Setting | Value |
 | --- | --- |
 | Framework Preset | Next.js |
-| Root Directory | `pace-coaching-site` if deployed from the larger `E^2` workspace |
+| Root Directory | `pace-coaching` if deployed from the parent `pace-coaching-site` folder, or blank/default if this Git repo is connected directly |
 | Install Command | `npm install` |
 | Build Command | `npm run build` |
 | Output Directory | Let Vercel auto-detect |
@@ -124,6 +124,7 @@ This site currently does not require environment variables. If you add any later
 ## Important Files
 
 - `app/` - pages, layouts, and site UI.
+- `public/downloads/` - static downloadable files, including the friction grid PDF.
 - `next.config.ts` - Next.js configuration.
 - `package.json` - scripts and dependencies.
 - `.vercel/` - local Vercel project link. This is intentionally ignored by Git and should not be committed.
