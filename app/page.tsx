@@ -154,7 +154,7 @@ export default function HomePage() {
                 and reflexivity.
               </p>
               <a
-                href="/downloads/friction-grid-redesigned.pdf"
+                href="/downloads/friction-grid.pdf"
                 download
                 className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-gray-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-800"
               >
