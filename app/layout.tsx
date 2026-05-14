@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Pace Coaching",
-  description: "For the millions of us who hold it all together and still go invisible. Let's make the patterns visible.",
+  title: "Friction Point Coaching",
+  description: "Coaching that helps you read friction as signal, follow the pattern, and decide what to hold or rewrite.",
 };
 
 export default function RootLayout({

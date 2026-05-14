@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import type { FormEvent } from 'react';
 
-const contactEmail = 'dpace@campusone80.com';
+const contactEmail = 'contact@frictionpoint.co';
 
 export default function EmailSignup() {
   const [email, setEmail] = useState('');
@@ -12,7 +12,7 @@ export default function EmailSignup() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const subject = encodeURIComponent('Pace Coaching inquiry');
+    const subject = encodeURIComponent('Friction Point Coaching inquiry');
     const body = encodeURIComponent(
       [
         `Email: ${email}`,

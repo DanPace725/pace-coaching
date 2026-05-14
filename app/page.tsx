@@ -2,19 +2,19 @@ import Link from 'next/link';
 import EmailSignup from './EmailSignup';
 
 const dimensions = [
-  ['Continuity', 'Can you still recognize yourself across the roles you carry?'],
-  ['Vitality', 'Is there energy left for your actual life?'],
-  ['Contextual Fit', 'Do your roles and environments fit how you actually work?'],
-  ['Differentiation', 'Can you tell your real limits from inherited demands?'],
-  ['Accountability', 'Can you separate your part from the systems failing around you?'],
-  ['Reflexivity', 'Can your self-story update when the evidence changes?'],
+  ['Signal', 'What keeps catching your attention before it has a name?'],
+  ['Pattern', 'Where does the same resistance keep showing up?'],
+  ['Principle', 'What rule or assumption is organizing the pattern?'],
+  ['Paradigm', 'What larger story taught you to read the situation this way?'],
+  ['Pressure', 'Which friction needs care, and which friction needs release?'],
+  ['Practice', 'What small experiment would let the story begin to bend?'],
 ];
 
 const goodFit = [
-  "You are competent but worn down.",
   "You can feel the friction but cannot quite name the pattern.",
-  "You want a real map before making bigger moves.",
-  "You are open to small experiments that fit the life you already have.",
+  "You want something more specific than one-size-fits-all advice.",
+  "You are ready to tell the truth about what is working and what is not.",
+  "You are open to small experiments that fit the life you actually have.",
 ];
 
 const notFit = [
@@ -29,7 +29,7 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="font-semibold text-gray-900 tracking-tight">
-            Pace Coaching
+            Friction Point Coaching
           </Link>
           <nav className="hidden sm:flex items-center gap-8 text-sm text-gray-500">
             <a href="#approach" className="hover:text-gray-900 transition-colors">Approach</a>
@@ -43,20 +43,20 @@ export default function HomePage() {
       <main>
         <section>
           <div className="max-w-5xl mx-auto px-6 py-24 sm:py-32">
-            <p className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-4">Pace Coaching</p>
+            <p className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-4">Friction Point Coaching</p>
             <h1 className="text-4xl sm:text-5xl font-semibold text-gray-900 tracking-tight leading-tight max-w-3xl">
-              You're not the only one who hasn't figured it out.
+              Every point of friction is a potential point of failure or freedom.
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-gray-500 max-w-2xl leading-relaxed">
-              For people who hold it together, pay the hidden cost, and still wonder why ordinary life feels harder
-              than it should.
+              Coaching for people who want to read the resistance in their lives as signal, follow it to the pattern,
+              and decide what to hold and what to rewrite.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a href="#contact" className="px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors text-center">
                 Start a conversation
               </a>
               <a href="#resources" className="px-6 py-3 text-gray-600 text-sm font-medium rounded-lg border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-colors text-center">
-                Get the free grid
+                Get the free resource
               </a>
             </div>
           </div>
@@ -66,13 +66,13 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto px-6 py-20 sm:py-24">
             <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">The approach</h2>
             <p className="text-2xl sm:text-3xl font-semibold text-gray-900 max-w-3xl leading-snug mb-10">
-              We look for the gap between who you actually are and who your life keeps requiring you to be.
+              We start where life catches, because friction is usually information before it is a problem.
             </p>
             <div className="grid sm:grid-cols-3 gap-8">
               {[
-                ['Listen', 'Start with what your life actually feels like, not a checklist.'],
-                ['Map', 'Name the roles, demands, workarounds, and stories that keep repeating.'],
-                ['Test', 'Design small experiments that reduce load without demanding a total overhaul.'],
+                ['Listen', 'Start with what your life actually feels like, not a preset system.'],
+                ['Map', 'Name the friction, the repeating pattern, and the story underneath it.'],
+                ['Bend', 'Find the place where a small honest change can matter.'],
               ].map(([title, description]) => (
                 <div key={title}>
                   <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
@@ -87,7 +87,7 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto px-6 py-20 sm:py-24">
             <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">Where we look</h2>
             <p className="text-2xl sm:text-3xl font-semibold text-gray-900 max-w-3xl leading-snug mb-10">
-              Six places where hidden costs often show up.
+              A simple depth model for deciding how far the work needs to go.
             </p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {dimensions.map(([name, description]) => (
@@ -106,18 +106,18 @@ export default function HomePage() {
               <div>
                 <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">Free resource</h2>
                 <p className="text-2xl sm:text-3xl font-semibold text-gray-900 max-w-3xl leading-snug">
-                  A simple friction grid for naming what daily life has made invisible.
+                  A simple friction grid for turning stuck places into usable signal.
                 </p>
                 <p className="mt-6 text-gray-500 max-w-2xl leading-relaxed">
-                  Use it before coaching, journaling, or a hard conversation. It gives you a first map of where the
-                  load is coming from.
+                  Use it before coaching, journaling, or a hard conversation. It gives you a first map of what is
+                  catching, repeating, and asking for attention.
                 </p>
               </div>
               <div className="rounded-lg border border-gray-200 bg-white p-6">
                 <p className="text-xs font-medium uppercase tracking-wide text-gray-400">PDF download</p>
                 <h3 className="mt-3 text-lg font-semibold text-gray-900">Friction Grid</h3>
                 <p className="mt-2 text-sm leading-relaxed text-gray-500">
-                  A printable worksheet for mapping friction across the six core dimensions.
+                  A printable worksheet for naming friction, spotting patterns, and choosing a next step.
                 </p>
                 <a
                   href="/downloads/friction-grid.pdf"
@@ -135,7 +135,7 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto px-6 py-20 sm:py-24">
             <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">Fit</h2>
             <p className="text-2xl sm:text-3xl font-semibold text-gray-900 max-w-3xl leading-snug mb-10">
-              This works best when you want honesty about the pattern, not more pressure to push through it.
+              This works best when you want honest discernment, not more pressure to push through.
             </p>
             <div className="grid sm:grid-cols-2 gap-8">
               <FitList title="Good fit" items={goodFit} tone="good" />
@@ -149,11 +149,12 @@ export default function HomePage() {
             <div className="max-w-3xl">
               <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">About</h2>
               <p className="text-2xl sm:text-3xl font-semibold text-gray-900 leading-snug mb-6">
-                My name is Daniel. I help people make hidden friction visible.
+                My name is Daniel. I help people follow friction to the place where things can actually change.
               </p>
               <p className="text-gray-500 leading-relaxed">
-                I am a coach, minister, and systems thinker. The work is practical and plainspoken: see what is really
-                happening, name the cost, and test the smallest useful change.
+                I am a coach and systems thinker. The work is practical and plainspoken: hear what is true, name the
+                pattern, and make the smallest useful move. I also offer focused support for neurodivergent adults
+                navigating life, work, and relationships in systems that were not built for them.
               </p>
             </div>
           </div>
@@ -167,8 +168,7 @@ export default function HomePage() {
                   Share your email or send a note.
                 </h2>
                 <p className="text-gray-400 max-w-xl leading-relaxed">
-                  No pressure. If this sounds close to what you have been carrying, send a short note and I will reply
-                  when I am able.
+                  No pressure. If this sounds close to what you have been carrying, send a short note and I will reply.
                 </p>
               </div>
               <EmailSignup />
@@ -179,7 +179,7 @@ export default function HomePage() {
 
       <footer className="border-t border-gray-100">
         <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Pace Coaching. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Friction Point Coaching. All rights reserved.</p>
           <nav className="flex gap-6">
             <a href="#approach" className="hover:text-gray-600 transition-colors">Approach</a>
             <a href="#resources" className="hover:text-gray-600 transition-colors">Resources</a>
