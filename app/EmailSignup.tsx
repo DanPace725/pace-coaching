@@ -25,37 +25,37 @@ export default function EmailSignup() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-lg bg-white p-5 text-gray-900">
+    <form onSubmit={handleSubmit} className="rounded-lg bg-white p-5 text-ink">
       <label className="block">
-        <span className="text-xs font-medium uppercase tracking-wide text-gray-400">Email</span>
+        <span className="font-sans text-xs font-medium uppercase tracking-[0.14em] text-slatefp">Email</span>
         <input
           type="email"
           required
           value={email}
           onChange={(event) => setEmail(event.target.value)}
           placeholder="you@example.com"
-          className="mt-2 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm outline-none transition-colors focus:border-gray-400"
+          className="mt-2 w-full rounded-lg border border-linefp px-3 py-2 text-sm outline-none transition-colors focus:border-steel"
         />
       </label>
       <label className="mt-4 block">
-        <span className="text-xs font-medium uppercase tracking-wide text-gray-400">Optional note</span>
+        <span className="font-sans text-xs font-medium uppercase tracking-[0.14em] text-slatefp">Optional note</span>
         <textarea
           value={note}
           onChange={(event) => setNote(event.target.value)}
           rows={4}
           placeholder="A sentence or two about what you are looking for."
-          className="mt-2 w-full resize-y rounded-lg border border-gray-200 px-3 py-2 text-sm outline-none transition-colors focus:border-gray-400"
+          className="mt-2 w-full resize-y rounded-lg border border-linefp px-3 py-2 text-sm outline-none transition-colors focus:border-steel"
         />
       </label>
       <button
         type="submit"
-        className="mt-5 w-full rounded-lg bg-gray-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-800"
+        className="mt-5 w-full rounded-lg bg-steel px-5 py-3 font-sans text-sm font-medium text-white transition-colors hover:bg-steeldeep"
       >
         Open email draft
       </button>
       <a
         href={`mailto:${contactEmail}`}
-        className="mt-3 block text-center text-xs text-gray-500 hover:text-gray-900"
+        className="mt-3 block text-center text-xs text-mutedfp hover:text-navy"
       >
         Or email {contactEmail}
       </a>

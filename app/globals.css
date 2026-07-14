@@ -1,17 +1,32 @@
 @import "tailwindcss";
 
-:root {
-  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-}
+/*
+  Friction Point brand tokens — light mode (public default).
+  Source of truth: current/brand/fp_brand_guide.md
+*/
+@theme {
+  /* color */
+  --color-navy: #16243a;        /* heading / monogram ink */
+  --color-ink: #232931;         /* body text */
+  --color-mutedfp: #5b6875;     /* secondary text */
+  --color-slatefp: #9aa8b2;     /* tertiary text, markers */
+  --color-mist: #eceff3;        /* page-tint background */
+  --color-mist2: #f7f9fb;       /* alternate section background */
+  --color-linefp: #d6dce3;      /* borders */
+  --color-steel: #31597a;       /* action */
+  --color-steeldeep: #274a66;   /* action hover */
+  --color-gold: #d9a441;        /* inflection — one per view */
+  --color-goldink: #7e5d1b;     /* gold as small text on light */
 
-@theme inline {
-  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  /* type */
+  --font-display: "Cormorant Garamond", "Palatino Linotype", Georgia, serif;
+  --font-sans: "Space Grotesk", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
