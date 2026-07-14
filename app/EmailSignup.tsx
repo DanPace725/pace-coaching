@@ -12,7 +12,7 @@ export default function EmailSignup() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const subject = encodeURIComponent('Friction Point Coaching inquiry');
+    const subject = encodeURIComponent('Friction Point inquiry');
     const body = encodeURIComponent(
       [
         `Email: ${email}`,
@@ -51,7 +51,7 @@ export default function EmailSignup() {
         type="submit"
         className="mt-5 w-full rounded-lg bg-gray-900 px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-gray-800"
       >
-        Share my email
+        Open email draft
       </button>
       <a
         href={`mailto:${contactEmail}`}

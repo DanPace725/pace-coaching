@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Friction Point Coaching",
-  description: "Coaching that helps you read friction as signal, follow the pattern, and decide what to hold or rewrite.",
+  title: "Friction Point | Coaching and consulting for recurring friction",
+  description: "Make one recurring stuck pattern legible and build the smallest useful structure that restores movement.",
 };
 
 export default function RootLayout({

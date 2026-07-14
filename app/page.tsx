@@ -1,26 +1,44 @@
 import Link from 'next/link';
 import EmailSignup from './EmailSignup';
 
-const dimensions = [
-  ['Signal', 'What keeps catching your attention before it has a name?'],
-  ['Pattern', 'Where does the same resistance keep showing up?'],
-  ['Principle', 'What rule or assumption is organizing the pattern?'],
-  ['Paradigm', 'What larger story taught you to read the situation this way?'],
-  ['Pressure', 'Which friction needs care, and which friction needs release?'],
-  ['Practice', 'What small experiment would let the story begin to bend?'],
-];
+const offers = [
+  {
+    name: 'Friction Grid',
+    role: 'Free recognition resource',
+    description: 'Map where friction is gathering and choose one area that deserves closer attention.',
+    detail: 'Useful on its own. The Grid locates reported friction; it does not determine cause.',
+    href: '#resources',
+    action: 'Get the free Grid',
+  },
+  {
+    name: 'Friction Snapshot',
+    role: 'Paid, bounded diagnostic',
+    description: 'Bring one recurring stuck point to a focused 60-minute session and receive a concise written report.',
+    detail: 'The report separates what was observed from what appears likely and what remains possible.',
+    href: '#contact',
+    action: 'Ask about a Snapshot',
+  },
+  {
+    name: 'Friction Fix Sprint',
+    role: 'Optional implementation',
+    description: 'Build one maintainable support—such as a workflow, checklist, decision rule, tracker, or small automation.',
+    detail: 'A Sprint is proposed only when a specific artifact is likely to reduce the identified friction.',
+    href: '#contact',
+    action: 'Discuss a possible Sprint',
+  },
+] as const;
 
 const goodFit = [
-  "You can feel the friction but cannot quite name the pattern.",
-  "You want something more specific than one-size-fits-all advice.",
-  "You are ready to tell the truth about what is working and what is not.",
-  "You are open to small experiments that fit the life you actually have.",
+  'You can feel recurring friction but cannot quite name what sustains it.',
+  'You want a bounded investigation rather than a total-life or total-organization assessment.',
+  'You are willing to examine one recent example and distinguish evidence from interpretation.',
+  'You are open to a small, testable change that fits the life or work you actually have.',
 ];
 
 const notFit = [
-  "You are in acute crisis and need clinical care.",
-  "You want someone else to make the calls for your life.",
-  "You are looking for motivational pressure instead of honest clarity.",
+  'You are in acute crisis and need clinical or emergency support.',
+  'You need medical, legal, financial, or other licensed professional advice.',
+  'You want someone else to take permanent ownership of the problem.',
 ];
 
 export default function HomePage() {
@@ -29,11 +47,12 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="font-semibold text-gray-900 tracking-tight">
-            Friction Point Coaching
+            Friction Point
           </Link>
-          <nav className="hidden sm:flex items-center gap-8 text-sm text-gray-500">
+          <nav aria-label="Primary navigation" className="hidden sm:flex items-center gap-8 text-sm text-gray-500">
             <a href="#approach" className="hover:text-gray-900 transition-colors">Approach</a>
-            <a href="#resources" className="hover:text-gray-900 transition-colors">Resources</a>
+            <a href="#offers" className="hover:text-gray-900 transition-colors">Ways to work</a>
+            <a href="#resources" className="hover:text-gray-900 transition-colors">Free Grid</a>
             <a href="#fit" className="hover:text-gray-900 transition-colors">Fit</a>
             <a href="#contact" className="hover:text-gray-900 transition-colors">Contact</a>
           </nav>
@@ -43,20 +62,20 @@ export default function HomePage() {
       <main>
         <section>
           <div className="max-w-5xl mx-auto px-6 py-24 sm:py-32">
-            <p className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-4">Friction Point Coaching</p>
+            <p className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-4">Friction Point</p>
             <h1 className="text-4xl sm:text-5xl font-semibold text-gray-900 tracking-tight leading-tight max-w-3xl">
               Every point of friction is a potential point of failure or freedom.
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-gray-500 max-w-2xl leading-relaxed">
-              Coaching for people who want to read the resistance in their lives as signal, follow it to the pattern,
-              and decide what to hold and what to rewrite.
+            <p className="mt-6 text-lg sm:text-xl text-gray-500 max-w-3xl leading-relaxed">
+              Practical coaching and consulting for people and small teams who want to make one recurring stuck
+              pattern legible—and build the smallest useful structure that restores movement.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a href="#contact" className="px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors text-center">
-                Start a conversation
+              <a href="#offers" className="px-6 py-3 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-800 transition-colors text-center">
+                Explore ways to work
               </a>
               <a href="#resources" className="px-6 py-3 text-gray-600 text-sm font-medium rounded-lg border border-gray-200 hover:border-gray-300 hover:text-gray-900 transition-colors text-center">
-                Get the free resource
+                Get the free Friction Grid
               </a>
             </div>
           </div>
@@ -66,13 +85,13 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto px-6 py-20 sm:py-24">
             <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">The approach</h2>
             <p className="text-2xl sm:text-3xl font-semibold text-gray-900 max-w-3xl leading-snug mb-10">
-              We start where life catches, because friction is usually information before it is a problem.
+              Map before solving. Work with one recurring stuck point at a time.
             </p>
             <div className="grid sm:grid-cols-3 gap-8">
               {[
-                ['Listen', 'Start with what your life actually feels like, not a preset system.'],
-                ['Map', 'Name the friction, the repeating pattern, and the story underneath it.'],
-                ['Bend', 'Find the place where a small honest change can matter.'],
+                ['Surface', 'Use your language to make the friction and its context visible.'],
+                ['Trace', 'Reconstruct one recent episode and identify where movement broke down.'],
+                ['Scaffold and test', 'Try the smallest safe support and choose a signal that will show whether it helps.'],
               ].map(([title, description]) => (
                 <div key={title}>
                   <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
@@ -83,18 +102,27 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section>
+        <section id="offers">
           <div className="max-w-5xl mx-auto px-6 py-20 sm:py-24">
-            <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">Where we look</h2>
-            <p className="text-2xl sm:text-3xl font-semibold text-gray-900 max-w-3xl leading-snug mb-10">
-              A simple depth model for deciding how far the work needs to go.
+            <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">Ways to work</h2>
+            <p className="text-2xl sm:text-3xl font-semibold text-gray-900 max-w-3xl leading-snug mb-4">
+              Start with the lightest level of support that can be useful.
             </p>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {dimensions.map(([name, description]) => (
-                <div key={name} className="p-5 bg-white rounded-lg border border-gray-200">
-                  <h3 className="font-semibold text-gray-900 mb-1.5">{name}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
-                </div>
+            <p className="text-gray-500 max-w-2xl leading-relaxed mb-10">
+              Each step stands on its own. Using the Grid does not obligate you to book a Snapshot, and a Snapshot
+              leads to a Sprint only when a specific support artifact makes sense.
+            </p>
+            <div className="grid gap-6 lg:grid-cols-3">
+              {offers.map((offer) => (
+                <article key={offer.name} className="flex flex-col rounded-lg border border-gray-200 bg-white p-6">
+                  <p className="text-xs font-medium uppercase tracking-wide text-gray-400">{offer.role}</p>
+                  <h3 className="mt-3 text-xl font-semibold text-gray-900">{offer.name}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-600">{offer.description}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-gray-400">{offer.detail}</p>
+                  <a href={offer.href} className="mt-6 text-sm font-medium text-gray-900 hover:text-gray-600">
+                    {offer.action} →
+                  </a>
+                </article>
               ))}
             </div>
           </div>
@@ -106,18 +134,18 @@ export default function HomePage() {
               <div>
                 <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">Free resource</h2>
                 <p className="text-2xl sm:text-3xl font-semibold text-gray-900 max-w-3xl leading-snug">
-                  A simple friction grid for turning stuck places into usable signal.
+                  Make everyday strain visible enough to work with.
                 </p>
                 <p className="mt-6 text-gray-500 max-w-2xl leading-relaxed">
-                  Use it before coaching, journaling, or a hard conversation. It gives you a first map of what is
-                  catching, repeating, and asking for attention.
+                  The Friction Grid maps current friction across life domains and internal, relational, and structural
+                  sources. It is a present-tense awareness tool, not a diagnosis or verdict.
                 </p>
               </div>
               <div className="rounded-lg border border-gray-200 bg-white p-6">
                 <p className="text-xs font-medium uppercase tracking-wide text-gray-400">PDF download</p>
                 <h3 className="mt-3 text-lg font-semibold text-gray-900">Friction Grid</h3>
                 <p className="mt-2 text-sm leading-relaxed text-gray-500">
-                  A printable worksheet for naming friction, spotting patterns, and choosing a next step.
+                  A printable two-page worksheet for mapping friction, noticing patterns, and choosing one small experiment.
                 </p>
                 <a
                   href="/downloads/friction-grid.pdf"
@@ -133,14 +161,19 @@ export default function HomePage() {
 
         <section id="fit">
           <div className="max-w-5xl mx-auto px-6 py-20 sm:py-24">
-            <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">Fit</h2>
+            <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">Fit and boundaries</h2>
             <p className="text-2xl sm:text-3xl font-semibold text-gray-900 max-w-3xl leading-snug mb-10">
-              This works best when you want honest discernment, not more pressure to push through.
+              This works best when you want a careful map and a practical next move—not pressure to push through.
             </p>
             <div className="grid sm:grid-cols-2 gap-8">
               <FitList title="Good fit" items={goodFit} tone="good" />
               <FitList title="Not the right fit" items={notFit} tone="muted" />
             </div>
+            <p className="mt-10 max-w-3xl text-sm leading-relaxed text-gray-400">
+              Friction Point does not provide therapy, crisis care, diagnosis, medical or veterinary care, legal or
+              tax advice, financial planning, licensed engineering, or guaranteed outcomes. When a need falls outside
+              the work, we pause, narrow the scope, or refer appropriately.
+            </p>
           </div>
         </section>
 
@@ -149,12 +182,13 @@ export default function HomePage() {
             <div className="max-w-3xl">
               <h2 className="text-sm font-medium text-gray-400 uppercase tracking-wide mb-3">About</h2>
               <p className="text-2xl sm:text-3xl font-semibold text-gray-900 leading-snug mb-6">
-                My name is Daniel. I help people follow friction to the place where things can actually change.
+                My name is Daniel. I help people and small teams follow friction to the place where something can actually change.
               </p>
               <p className="text-gray-500 leading-relaxed">
-                I am a coach and systems thinker. The work is practical and plainspoken: hear what is true, name the
-                pattern, and make the smallest useful move. I also offer focused support for neurodivergent adults
-                navigating life, work, and relationships in systems that were not built for them.
+                I am a coach, consultant, and systems thinker. The work is practical and plainspoken: hear what is
+                true, trace one recurring pattern, distinguish evidence from interpretation, and build the smallest
+                useful support. My perspective also includes focused experience with neurodivergent adults navigating
+                life, work, and relationships in systems that were not built for them.
               </p>
             </div>
           </div>
@@ -165,11 +199,21 @@ export default function HomePage() {
             <div className="grid gap-10 lg:grid-cols-[1fr_24rem] lg:items-start">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-semibold leading-snug mb-4">
-                  Share your email or send a note.
+                  Start with a free 30-minute discovery session.
                 </h2>
                 <p className="text-gray-400 max-w-xl leading-relaxed">
-                  No pressure. If this sounds close to what you have been carrying, send a short note and I will reply.
+                  Bring one recurring stuck point or a question about the work. We will use the conversation to see
+                  whether a Friction Snapshot or another next step seems useful and responsible.
                 </p>
+                <a
+                  href="https://calendly.com/frictionpoint"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-7 inline-flex rounded-lg bg-white px-6 py-3 text-sm font-medium text-gray-900 transition-colors hover:bg-gray-100"
+                >
+                  Schedule a free 30-minute session
+                </a>
+                <p className="mt-4 text-sm text-gray-500">Prefer email? Use the form.</p>
               </div>
               <EmailSignup />
             </div>
@@ -179,10 +223,11 @@ export default function HomePage() {
 
       <footer className="border-t border-gray-100">
         <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Friction Point Coaching. All rights reserved.</p>
-          <nav className="flex gap-6">
+          <p>&copy; {new Date().getFullYear()} Friction Point, a practice of Pace Consulting Services LLC.</p>
+          <nav aria-label="Footer navigation" className="flex gap-6">
             <a href="#approach" className="hover:text-gray-600 transition-colors">Approach</a>
-            <a href="#resources" className="hover:text-gray-600 transition-colors">Resources</a>
+            <a href="#offers" className="hover:text-gray-600 transition-colors">Ways to work</a>
+            <a href="#resources" className="hover:text-gray-600 transition-colors">Free Grid</a>
             <a href="#contact" className="hover:text-gray-600 transition-colors">Contact</a>
           </nav>
         </div>
@@ -198,8 +243,8 @@ function FitList({ title, items, tone }: { title: string; items: string[]; tone:
       <ul className="space-y-3">
         {items.map((item) => (
           <li key={item} className={`flex gap-3 text-sm ${tone === 'good' ? 'text-gray-600' : 'text-gray-400'}`}>
-            <span className={`mt-0.5 shrink-0 ${tone === 'good' ? 'text-emerald-500' : 'text-gray-300'}`}>
-              {tone === 'good' ? '\u2713' : '-'}
+            <span aria-hidden="true" className={`mt-0.5 shrink-0 ${tone === 'good' ? 'text-emerald-500' : 'text-gray-300'}`}>
+              {tone === 'good' ? '✓' : '–'}
             </span>
             {item}
           </li>
