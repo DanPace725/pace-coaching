@@ -23,7 +23,7 @@ const offers = [
   {
     name: 'Friction Fix Sprint',
     role: 'Optional implementation',
-    description: 'Build one maintainable support—such as a workflow, checklist, decision rule, tracker, or small automation.',
+    description: 'Build one maintainable support, such as a workflow, checklist, decision rule, tracker, or small automation.',
     detail: 'A Sprint is proposed only when a specific artifact is likely to reduce the identified friction.',
     href: '#contact',
     action: 'Discuss a possible Sprint',
@@ -73,7 +73,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-mutedfp max-w-3xl leading-relaxed">
               Practical coaching and consulting for people and small teams who want to make one recurring stuck
-              pattern legible—and build the smallest useful structure that restores movement.
+              pattern legible and build the smallest useful structure that restores movement.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
               <a href="#offers" className="px-6 py-3 bg-steel text-white font-sans text-sm font-medium rounded-lg hover:bg-steeldeep transition-colors text-center">
@@ -175,7 +175,7 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto px-6 py-20 sm:py-24">
             <h2 className="font-sans text-sm font-medium text-steel uppercase tracking-[0.18em] mb-3">Fit and boundaries</h2>
             <p className="font-display text-3xl sm:text-4xl font-medium text-navy max-w-3xl leading-snug mb-10">
-              This works best when you want a careful map and a practical next move—not pressure to push through.
+                This works best when you want a careful map and a practical next move, not pressure to push through.
             </p>
             <div className="grid sm:grid-cols-2 gap-8">
               <FitList title="Good fit" items={goodFit} tone="good" />
