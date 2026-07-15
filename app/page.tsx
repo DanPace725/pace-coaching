@@ -8,8 +8,8 @@ const offers = [
     role: 'Free recognition resource',
     description: 'Map where friction is gathering and choose one area that deserves closer attention.',
     detail: 'Useful on its own. The Grid locates reported friction; it does not determine cause.',
-    href: '#resources',
-    action: 'Get the free Grid',
+    href: '/grid',
+    action: 'Use the interactive Grid',
     friction: false,
   },
   {
@@ -61,7 +61,7 @@ export default function HomePage() {
             <nav aria-label="Primary navigation" className="hidden sm:flex items-center gap-8 font-sans text-sm text-mutedfp">
               <a href="#approach" className="hover:text-navy transition-colors">Approach</a>
               <a href="#offers" className="hover:text-navy transition-colors">Ways to work</a>
-              <a href="#resources" className="hover:text-navy transition-colors">Free Grid</a>
+              <Link href="/grid" className="hover:text-navy transition-colors">Free Grid</Link>
               <a href="#fit" className="hover:text-navy transition-colors">Fit</a>
               <a href="#contact" className="hover:text-navy transition-colors">Contact</a>
             </nav>
@@ -85,9 +85,9 @@ export default function HomePage() {
               <a href="#offers" className="px-6 py-3 bg-steel text-actionink font-sans text-sm font-medium rounded-lg hover:bg-steeldeep transition-colors text-center">
                 Explore ways to work
               </a>
-              <a href="#resources" className="px-6 py-3 text-mutedfp font-sans text-sm font-medium rounded-lg border border-linefp hover:border-slatefp hover:text-navy transition-colors text-center">
-                Get the free Friction Grid
-              </a>
+              <Link href="/grid" className="px-6 py-3 text-mutedfp font-sans text-sm font-medium rounded-lg border border-linefp hover:border-slatefp hover:text-navy transition-colors text-center">
+                Use the free Friction Grid
+              </Link>
             </div>
           </div>
         </section>
@@ -160,17 +160,23 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="rounded-lg border border-linefp bg-surface p-6">
-                <p className="font-sans text-xs font-medium uppercase tracking-[0.14em] text-slatefp">PDF download</p>
+                <p className="font-sans text-xs font-medium uppercase tracking-[0.14em] text-slatefp">Interactive tool</p>
                 <h3 className="mt-3 font-sans text-lg font-semibold text-navy">Friction Grid</h3>
                 <p className="mt-2 text-sm leading-relaxed text-mutedfp">
-                  A printable two-page worksheet for mapping friction, noticing patterns, and choosing one small experiment.
+                  Map current friction in your browser, notice where it is gathering, and choose one small experiment.
                 </p>
+                <Link
+                  href="/grid"
+                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-steel px-5 py-3 font-sans text-sm font-medium text-actionink transition-colors hover:bg-steeldeep"
+                >
+                  Use the interactive Grid
+                </Link>
                 <a
                   href="/downloads/friction-grid.pdf"
                   download
-                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-steel px-5 py-3 font-sans text-sm font-medium text-actionink transition-colors hover:bg-steeldeep"
+                  className="mt-3 block text-center font-sans text-xs text-mutedfp transition-colors hover:text-navy"
                 >
-                  Download the PDF
+                  Or download the printable PDF
                 </a>
               </div>
             </div>
@@ -245,7 +251,7 @@ export default function HomePage() {
           <nav aria-label="Footer navigation" className="flex gap-6">
             <a href="#approach" className="hover:text-mutedfp transition-colors">Approach</a>
             <a href="#offers" className="hover:text-mutedfp transition-colors">Ways to work</a>
-            <a href="#resources" className="hover:text-mutedfp transition-colors">Free Grid</a>
+            <Link href="/grid" className="hover:text-mutedfp transition-colors">Free Grid</Link>
             <a href="#contact" className="hover:text-mutedfp transition-colors">Contact</a>
           </nav>
         </div>

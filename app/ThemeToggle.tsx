@@ -1,16 +1,26 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
+
+type Mode = 'dark' | 'light';
+
+const modeEvent = 'friction-point-mode-change';
+
+function subscribeToMode(callback: () => void) {
+  window.addEventListener(modeEvent, callback);
+  return () => window.removeEventListener(modeEvent, callback);
+}
+
+function getModeSnapshot(): Mode {
+  return document.documentElement.dataset.mode === 'light' ? 'light' : 'dark';
+}
+
+function getServerModeSnapshot(): Mode {
+  return 'dark';
+}
 
 export default function ThemeToggle() {
-  const [mode, setMode] = useState<'dark' | 'light'>('dark');
-
-  useEffect(() => {
-    const current = document.documentElement.dataset.mode;
-    if (current === 'light' || current === 'dark') {
-      setMode(current);
-    }
-  }, []);
+  const mode = useSyncExternalStore(subscribeToMode, getModeSnapshot, getServerModeSnapshot);
 
   function toggle() {
     const next = mode === 'dark' ? 'light' : 'dark';
@@ -18,9 +28,9 @@ export default function ThemeToggle() {
     try {
       localStorage.setItem('fp-mode', next);
     } catch {
-      /* private browsing — theme just won't persist */
+      // In private browsing, the theme still changes for the current page.
     }
-    setMode(next);
+    window.dispatchEvent(new Event(modeEvent));
   }
 
   return (
