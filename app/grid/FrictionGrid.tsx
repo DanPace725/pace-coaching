@@ -182,7 +182,7 @@ export function FrictionGrid() {
                           aria-label={`${domain}, ${source} friction`}
                           value={value ?? ''}
                           onChange={(event) => updateRating(domain, source, event.target.value)}
-                          className={`w-full rounded-lg border px-3 py-2.5 text-ink outline-none transition-colors focus:border-steel ${
+                          className={`friction-rating-select w-full rounded-lg border px-3 py-2.5 text-ink outline-none transition-colors focus:border-steel ${
                             value ? ratingStyles[value] : 'border-linefp bg-page'
                           }`}
                         >

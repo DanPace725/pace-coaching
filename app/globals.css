@@ -72,3 +72,16 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.friction-rating-select {
+  color-scheme: dark;
+}
+
+[data-mode="light"] .friction-rating-select {
+  color-scheme: light;
+}
+
+.friction-rating-select option {
+  background-color: var(--tk-page);
+  color: var(--tk-ink);
+}
