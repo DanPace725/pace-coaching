@@ -14,6 +14,16 @@ This is the canonical public website for Friction Point. It is a Next.js site de
 2. Run `npm run lint` and `npm run build` before committing.
 3. Commit and push to the repository. Vercel will follow the branch configuration already set for the project.
 
+## Contact Email Setup
+
+The contact form sends through Resend using `app/api/contact/route.ts`. Configure these server-only variables in Vercel for Production, Preview, and Development as appropriate:
+
+- `RESEND_API_KEY` - provisioned by Resend or the Vercel Marketplace integration.
+- `RESEND_FROM_EMAIL` - defaults to `Friction Point Website <website@frictionpoint.co>`.
+- `CONTACT_EMAIL` - defaults to `contact@frictionpoint.co`.
+
+Verify `frictionpoint.co` as a sending domain in Resend before using the default sender. For local testing, copy `.env.example` to `.env.local` and add the private API key. Never commit `.env.local`.
+
 ## Canonical Content Sources
 
 - Practice architecture: `../strategy/brand_architecture.md`
