@@ -1,22 +1,60 @@
 @import "tailwindcss";
 
 /*
-  Friction Point brand tokens — light mode (public default).
+  Friction Point brand tokens — dual mode, dark by default.
   Source of truth: current/brand/fp_brand_guide.md
+  The toggle sets <html data-mode="light|dark">; tokens below flip with it.
 */
-@theme {
-  /* color */
-  --color-navy: #16243a;        /* heading / monogram ink */
-  --color-ink: #232931;         /* body text */
-  --color-mutedfp: #5b6875;     /* secondary text */
-  --color-slatefp: #9aa8b2;     /* tertiary text, markers */
-  --color-mist: #eceff3;        /* page-tint background */
-  --color-mist2: #f7f9fb;       /* alternate section background */
-  --color-linefp: #d6dce3;      /* borders */
-  --color-steel: #31597a;       /* action */
-  --color-steeldeep: #274a66;   /* action hover */
-  --color-gold: #d9a441;        /* inflection — one per view */
-  --color-goldink: #7e5d1b;     /* gold as small text on light */
+:root,
+[data-mode="dark"] {
+  --tk-page: #0f1722;
+  --tk-surface: #18222e;
+  --tk-surface2: #131d28;
+  --tk-line: #2a3644;
+  --tk-ink: #e5eaef;
+  --tk-heading: #dce3ea;
+  --tk-muted: #92a5b5;
+  --tk-slate: #8ca0b0;
+  --tk-action: #7faecd;
+  --tk-action-deep: #9cc2db;
+  --tk-action-ink: #0c1520;
+}
+
+[data-mode="light"] {
+  --tk-page: #ffffff;
+  --tk-surface: #ffffff;
+  --tk-surface2: #f7f9fb;
+  --tk-line: #d6dce3;
+  --tk-ink: #232931;
+  --tk-heading: #16243a;
+  --tk-muted: #5b6875;
+  --tk-slate: #9aa8b2;
+  --tk-action: #31597a;
+  --tk-action-deep: #274a66;
+  --tk-action-ink: #ffffff;
+}
+
+@custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
+
+@theme inline {
+  /* mode-aware tokens */
+  --color-page: var(--tk-page);
+  --color-surface: var(--tk-surface);
+  --color-mist2: var(--tk-surface2);
+  --color-linefp: var(--tk-line);
+  --color-ink: var(--tk-ink);
+  --color-navy: var(--tk-heading);
+  --color-mutedfp: var(--tk-muted);
+  --color-slatefp: var(--tk-slate);
+  --color-steel: var(--tk-action);
+  --color-steeldeep: var(--tk-action-deep);
+  --color-actionink: var(--tk-action-ink);
+
+  /* fixed brand constants */
+  --color-mist: #eceff3;
+  --color-gold: #d9a441;
+  --color-goldink: #7e5d1b;
+  --color-monogram: #16243a;
 
   /* type */
   --font-display: "Cormorant Garamond", "Palatino Linotype", Georgia, serif;

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import EmailSignup from './EmailSignup';
+import ThemeToggle from './ThemeToggle';
 
 const offers = [
   {
@@ -47,20 +48,25 @@ const notFit = [
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-linefp">
-        <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+      <header className="sticky top-0 z-50 bg-page/90 backdrop-blur border-b border-linefp">
+        <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between gap-4">
           <Link href="/" className="flex items-center gap-2.5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/fp-mark.svg" alt="" aria-hidden="true" className="h-8 w-auto" />
+            <img src="/fp-mark.svg" alt="" aria-hidden="true" className="h-8 w-auto dark:hidden" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/fp-mark-dark.svg" alt="" aria-hidden="true" className="h-8 w-auto hidden dark:block" />
             <span className="font-display text-xl font-semibold text-navy tracking-tight">Friction Point</span>
           </Link>
-          <nav aria-label="Primary navigation" className="hidden sm:flex items-center gap-8 font-sans text-sm text-mutedfp">
-            <a href="#approach" className="hover:text-navy transition-colors">Approach</a>
-            <a href="#offers" className="hover:text-navy transition-colors">Ways to work</a>
-            <a href="#resources" className="hover:text-navy transition-colors">Free Grid</a>
-            <a href="#fit" className="hover:text-navy transition-colors">Fit</a>
-            <a href="#contact" className="hover:text-navy transition-colors">Contact</a>
-          </nav>
+          <div className="flex items-center gap-6">
+            <nav aria-label="Primary navigation" className="hidden sm:flex items-center gap-8 font-sans text-sm text-mutedfp">
+              <a href="#approach" className="hover:text-navy transition-colors">Approach</a>
+              <a href="#offers" className="hover:text-navy transition-colors">Ways to work</a>
+              <a href="#resources" className="hover:text-navy transition-colors">Free Grid</a>
+              <a href="#fit" className="hover:text-navy transition-colors">Fit</a>
+              <a href="#contact" className="hover:text-navy transition-colors">Contact</a>
+            </nav>
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
@@ -76,7 +82,7 @@ export default function HomePage() {
               pattern legible and build the smallest useful structure that restores movement.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a href="#offers" className="px-6 py-3 bg-steel text-white font-sans text-sm font-medium rounded-lg hover:bg-steeldeep transition-colors text-center">
+              <a href="#offers" className="px-6 py-3 bg-steel text-actionink font-sans text-sm font-medium rounded-lg hover:bg-steeldeep transition-colors text-center">
                 Explore ways to work
               </a>
               <a href="#resources" className="px-6 py-3 text-mutedfp font-sans text-sm font-medium rounded-lg border border-linefp hover:border-slatefp hover:text-navy transition-colors text-center">
@@ -121,7 +127,7 @@ export default function HomePage() {
               {offers.map((offer) => (
                 <article
                   key={offer.name}
-                  className={`flex flex-col rounded-lg border bg-white p-6 ${
+                  className={`flex flex-col rounded-lg border bg-surface p-6 ${
                     offer.friction
                       ? 'border-linefp border-t-2 border-t-gold lg:translate-y-2.5'
                       : 'border-linefp'
@@ -153,7 +159,7 @@ export default function HomePage() {
                   sources. It is a present-tense awareness tool, not a diagnosis or verdict.
                 </p>
               </div>
-              <div className="rounded-lg border border-linefp bg-white p-6">
+              <div className="rounded-lg border border-linefp bg-surface p-6">
                 <p className="font-sans text-xs font-medium uppercase tracking-[0.14em] text-slatefp">PDF download</p>
                 <h3 className="mt-3 font-sans text-lg font-semibold text-navy">Friction Grid</h3>
                 <p className="mt-2 text-sm leading-relaxed text-mutedfp">
@@ -162,7 +168,7 @@ export default function HomePage() {
                 <a
                   href="/downloads/friction-grid.pdf"
                   download
-                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-steel px-5 py-3 font-sans text-sm font-medium text-white transition-colors hover:bg-steeldeep"
+                  className="mt-6 inline-flex w-full items-center justify-center rounded-lg bg-steel px-5 py-3 font-sans text-sm font-medium text-actionink transition-colors hover:bg-steeldeep"
                 >
                   Download the PDF
                 </a>
@@ -206,7 +212,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section id="contact" className="bg-navy text-white">
+        <section id="contact" className="bg-monogram text-white">
           <div className="max-w-5xl mx-auto px-6 py-20 sm:py-24">
             <div className="grid gap-10 lg:grid-cols-[1fr_24rem] lg:items-start">
               <div>
@@ -221,7 +227,7 @@ export default function HomePage() {
                   href="https://calendly.com/frictionpoint"
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-7 inline-flex rounded-lg bg-white px-6 py-3 font-sans text-sm font-medium text-navy transition-colors hover:bg-mist"
+                  className="mt-7 inline-flex rounded-lg bg-white px-6 py-3 font-sans text-sm font-medium text-monogram transition-colors hover:bg-mist"
                 >
                   Schedule a free 30-minute session
                 </a>
